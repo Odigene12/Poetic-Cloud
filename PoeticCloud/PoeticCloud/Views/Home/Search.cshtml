@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h1>Search Page</h1>
+
+<div ng-controller="UserCtrl">
+    <div id="Search">
+        <div>
+            <input type="text" placeholder="keyword" ng-model="Search" />
+            <button class="glyphicon glyphicon-search" ng-click="SearchPoetry()"></button>
+        </div>
+        <div class="container">
+            <div ng-repeat="result in resultsArray">
+                <div class="panel panel-default">
+                    <div class="panel panel-heading">
+                        {{result.Title}}
+                    </div>
+                    <div class="panel panel-heading">
+                        by: {{result.Poet}}
+                    </div>
+                    <div>
+                        <button class="panel panel-success">Select</button>
+                    </div>
+                </div>
+            </div>         
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div ng-controller="UserCtrl">
+    <h3>My Poetry</h3>
+
+    <div class="panel panel-danger">
+        <ul>
+            <li>Title: </li>
+            <li>Author:</li>
+        </ul>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <div class="panel panel-default">
+                <input type="text" class="form-control" placeholder="Poem Title" ng-model="Poetry.Title" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="panel panel-default">
+                <input type="text" class="form-control" placeholder="Author Name" ng-model="Poetry.Author" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="panel panel-default">
+                <textarea class="form-control" placeholder="Poem Text" ng-model="Poetry.Words"> </textarea>
+            </div>
+        </div>
+        <button ng-click="CreateNSavePoem()">Create Poem</button>
+    </form>
+
+
+</div>
