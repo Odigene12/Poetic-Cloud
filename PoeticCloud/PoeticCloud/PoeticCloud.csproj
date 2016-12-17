@@ -366,6 +366,19 @@
     <Content Include="Content\themes\basic\assets\fonts\icons.woff" />
     <Content Include="Content\themes\basic\assets\fonts\icons.ttf" />
     <Content Include="Content\themes\basic\assets\fonts\icons.eot" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include="Scripts\CreateCtrl.js" />
+    <Content Include="Scripts\UserCtrl.js" />
+    <Content Include="wwwroot\lib\angular-d3-word-cloud\dist\angular-word-cloud.js" />
+    <Content Include="wwwroot\lib\angular-d3-word-cloud\dist\angular-word-cloud.min.js" />
+    <Content Include="wwwroot\lib\d3-cloud\build\d3.layout.cloud.js" />
+    <Content Include="wwwroot\lib\d3-dispatch\.gitignore" />
+    <Content Include="wwwroot\lib\d3-dispatch\index.js" />
+    <Content Include="wwwroot\lib\d3-dispatch\src\dispatch.js" />
+    <Content Include="wwwroot\lib\d3-dispatch\test\dispatch-test.js" />
+    <Content Include="wwwroot\lib\d3\d3.js" />
+    <Content Include="wwwroot\lib\d3\d3.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -375,6 +388,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\PoetryFactory.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\semantic.js" />
@@ -414,6 +428,24 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="wwwroot\lib\d3-cloud\.bower.json" />
+    <Content Include="wwwroot\lib\d3-cloud\bower.json" />
+    <Content Include="wwwroot\lib\d3-cloud\LICENSE" />
+    <Content Include="wwwroot\lib\d3-cloud\README.md" />
+    <Content Include="wwwroot\lib\d3-dispatch\.bower.json" />
+    <Content Include="wwwroot\lib\d3-dispatch\.eslintrc" />
+    <Content Include="wwwroot\lib\d3-dispatch\.npmignore" />
+    <Content Include="wwwroot\lib\d3-dispatch\d3-dispatch.sublime-project" />
+    <Content Include="wwwroot\lib\d3-dispatch\LICENSE" />
+    <Content Include="wwwroot\lib\d3-dispatch\package.json" />
+    <Content Include="wwwroot\lib\d3-dispatch\README.md" />
+    <Content Include="wwwroot\lib\d3\.bower.json" />
+    <Content Include="wwwroot\lib\d3\bower.json" />
+    <Content Include="wwwroot\lib\d3\LICENSE" />
+    <Content Include="wwwroot\lib\d3\README.md" />
+    <Content Include="wwwroot\lib\angular-d3-word-cloud\.bower.json" />
+    <Content Include="wwwroot\lib\angular-d3-word-cloud\bower.json" />
+    <Content Include="wwwroot\lib\angular-d3-word-cloud\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
