@@ -13,7 +13,7 @@ namespace PoeticCloud.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201612080527271_InitialCreate"; }
+            get { return "201612200152180_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

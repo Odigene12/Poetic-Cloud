@@ -2,11 +2,11 @@
   "name": "ASP.NET",
   "private": true,
   "dependencies": {
-    "d3": "~4.4.0",
+    "d3": "3.5.17",
     "d3-cloud": "~1.2.2",
-    "angular-d3-word-cloud": "~0.1.1"
+    "angular-word-cloud": "~0.1.3"
   },
   "resolutions": {
-    "d3": "~4.4.0"
+    "angular": "1.6.0"
   }
 }

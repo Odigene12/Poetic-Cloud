@@ -27,11 +27,14 @@ namespace PoeticCloud.DAL
         public void AddPoem(Poem newPoem)
         {
             Context.Poetry.Add(newPoem);
+            Context.SaveChanges();
         }
 
         public Poem RemovePoem(Poem newPoem)
         {
-            return Context.Poetry.Remove(newPoem);
+            Poem myPoem = Context.Poetry.Remove(newPoem);
+            Context.SaveChanges();
+            return myPoem;
         }
 
         public Poem FindPoemByTitle(string title)

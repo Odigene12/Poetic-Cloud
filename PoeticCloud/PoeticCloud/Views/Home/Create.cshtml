@@ -4,24 +4,27 @@
 
 <h2 class="text-center">Create Your Cloud</h2>
 <div ng-controller="CreateCtrl">
-    <div class="create">
-        <form>
-            <div class="form-group">
-                <div class="panel panel-default">
-                    <input type="text" class="form-control" placeholder="Poem Title" ng-model="Poetry.Title" />
-                </div>
+    <div class="myForm">
+        <div class="right item">
+            <div class="ui input"><input type="text" class="form-control" placeholder="Poem Title" ng-model="Poetry.Title" /></div>
+        </div>
+
+        <div class="right item">
+            <div class="ui input">
+                <input type="text" class="form-control" placeholder="Author Name" ng-model="Poetry.Author" />
             </div>
-            <div class="form-group">
-                <div class="panel panel-default">
-                    <input type="text" class="form-control" placeholder="Author Name" ng-model="Poetry.Author" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="panel panel-default">
-                    <textarea class="form-control" placeholder="Poem" ng-model="Poetry.Words"> </textarea>
-                </div>
-            </div>
+        </div>
+
+        <div class="right item">
+            <div class="ui input"> <textarea class="form-control" placeholder="Poem" ng-model="Poetry.Words"> </textarea></div>
+        </div>
+        <div>
             <button ng-click="CreateNSavePoem()">Create Poem</button>
-        </form>
+        </div>
+    </div>
+
+    <div id="wordsCloud">
+        <word-cloud words="words" width ="width" height ="height">
+        </word-cloud>
     </div>
 </div>

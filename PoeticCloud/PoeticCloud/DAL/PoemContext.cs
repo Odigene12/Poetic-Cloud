@@ -7,7 +7,7 @@ using System.Web;
 
 namespace PoeticCloud.DAL
 {
-    public class PoemContext : DbContext
+    public class PoemContext : ApplicationDbContext
     {
         public virtual DbSet<Poem> Poetry { get; set; }
     }

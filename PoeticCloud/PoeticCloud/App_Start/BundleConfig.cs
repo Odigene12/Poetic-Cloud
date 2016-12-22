@@ -36,7 +36,7 @@ namespace PoeticCloud
             bundles.Add(new ScriptBundle("~/bundles/wordcloud").Include(
                   "~/wwwroot/lib/d3/d3.min.js",
                   "~/wwwroot/lib/d3-cloud/build/d3.layout.cloud.js",
-                  "~/wwwroot/lib/angular-d3-word-cloud/dist/angular-word-cloud.min.js"));
+                  "~/wwwroot/lib/angular-d3-word-cloud/dist/angular-word-cloud.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

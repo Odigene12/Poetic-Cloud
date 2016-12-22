@@ -186,9 +186,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612080527271_InitialCreate.cs" />
-    <Compile Include="Migrations\201612080527271_InitialCreate.Designer.cs">
-      <DependentUpon>201612080527271_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201612200152180_InitialCreate.cs" />
+    <Compile Include="Migrations\201612200152180_InitialCreate.Designer.cs">
+      <DependentUpon>201612200152180_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -372,6 +372,15 @@
     <Content Include="Scripts\UserCtrl.js" />
     <Content Include="wwwroot\lib\angular-d3-word-cloud\dist\angular-word-cloud.js" />
     <Content Include="wwwroot\lib\angular-d3-word-cloud\dist\angular-word-cloud.min.js" />
+    <Content Include="wwwroot\lib\angular-word-cloud\build\angular-word-cloud.js" />
+    <Content Include="wwwroot\lib\angular-word-cloud\build\angular-word-cloud.min.js" />
+    <Content Include="wwwroot\lib\angular-word-cloud\example.html" />
+    <Content Include="wwwroot\lib\angular-word-cloud\Gruntfile.js" />
+    <Content Include="wwwroot\lib\angular-word-cloud\karma.conf.js" />
+    <Content Include="wwwroot\lib\angular-word-cloud\lib\jquery-2.0.3.min.js" />
+    <Content Include="wwwroot\lib\angular-word-cloud\src\angular-word-cloud.js" />
+    <Content Include="wwwroot\lib\angular-word-cloud\test\angularWordCloudTest.js" />
+    <Content Include="wwwroot\lib\angular-word-cloud\test\helpers.js" />
     <Content Include="wwwroot\lib\d3-cloud\build\d3.layout.cloud.js" />
     <Content Include="wwwroot\lib\d3-dispatch\.gitignore" />
     <Content Include="wwwroot\lib\d3-dispatch\index.js" />
@@ -439,13 +448,18 @@
     <Content Include="wwwroot\lib\d3-dispatch\LICENSE" />
     <Content Include="wwwroot\lib\d3-dispatch\package.json" />
     <Content Include="wwwroot\lib\d3-dispatch\README.md" />
+    <Content Include="wwwroot\lib\angular-d3-word-cloud\.bower.json" />
+    <Content Include="wwwroot\lib\angular-d3-word-cloud\bower.json" />
+    <Content Include="wwwroot\lib\angular-d3-word-cloud\README.md" />
     <Content Include="wwwroot\lib\d3\.bower.json" />
     <Content Include="wwwroot\lib\d3\bower.json" />
     <Content Include="wwwroot\lib\d3\LICENSE" />
     <Content Include="wwwroot\lib\d3\README.md" />
-    <Content Include="wwwroot\lib\angular-d3-word-cloud\.bower.json" />
-    <Content Include="wwwroot\lib\angular-d3-word-cloud\bower.json" />
-    <Content Include="wwwroot\lib\angular-d3-word-cloud\README.md" />
+    <Content Include="wwwroot\lib\angular-word-cloud\.bower.json" />
+    <Content Include="wwwroot\lib\angular-word-cloud\bower.json" />
+    <Content Include="wwwroot\lib\angular-word-cloud\LICENSE" />
+    <Content Include="wwwroot\lib\angular-word-cloud\package.json" />
+    <Content Include="wwwroot\lib\angular-word-cloud\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -459,8 +473,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612080527271_InitialCreate.resx">
-      <DependentUpon>201612080527271_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612200152180_InitialCreate.resx">
+      <DependentUpon>201612200152180_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

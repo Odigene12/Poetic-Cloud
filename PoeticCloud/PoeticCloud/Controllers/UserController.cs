@@ -29,7 +29,7 @@ namespace PoeticCloud.Controllers
         public void Post([FromBody]Poem poetry)
         {
             repo.AddPoem(poetry);
-            repo.Context.SaveChanges();
+            
         }
 
         // PUT api/<controller>/5

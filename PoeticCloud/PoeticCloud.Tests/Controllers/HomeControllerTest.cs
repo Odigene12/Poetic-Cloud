@@ -26,26 +26,26 @@ namespace PoeticCloud.Tests.Controllers
         }
 
         [TestMethod]
-        public void About()
+        public void Create()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
+            ViewResult result = controller.Create() as ViewResult;
 
             // Assert
             Assert.AreEqual("Your application description page.", result.ViewBag.Message);
         }
 
         [TestMethod]
-        public void Contact()
+        public void Search()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            ViewResult result = controller.Search() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
