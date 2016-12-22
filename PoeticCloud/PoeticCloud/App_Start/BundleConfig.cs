@@ -28,7 +28,8 @@ namespace PoeticCloud
                   "~/Scripts/app.js",
                   "~/Scripts/PoetryFactory.js",
                   "~/Scripts/UserCtrl.js",
-                  "~/Scripts/CreateCtrl.js"));
+                  "~/Scripts/CreateCtrl.js",
+                  "~/Scripts/SearchCtrl.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/semantic").Include(
                   "~/Scripts/semantic.js"));

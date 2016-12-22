@@ -369,6 +369,7 @@
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
     <Content Include="Scripts\CreateCtrl.js" />
+    <Content Include="Scripts\SearchCtrl.js" />
     <Content Include="Scripts\UserCtrl.js" />
     <Content Include="wwwroot\lib\angular-d3-word-cloud\dist\angular-word-cloud.js" />
     <Content Include="wwwroot\lib\angular-d3-word-cloud\dist\angular-word-cloud.min.js" />

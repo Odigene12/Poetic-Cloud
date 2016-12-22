@@ -3,13 +3,16 @@
     ViewBag.Title = "Index";
 }
 
-<div>
-    <h3>My Poetry</h3>
+<h2>My Poetry</h2>
 
-    <div class="panel panel-danger">
-        <ul>
-            <li>Title: </li>
-            <li>Author:</li>
-        </ul>
+<div ng-controller="UserCtrl">
+    <div ng-repeat="poem in userPoems">
+        <div>
+            <ul>
+                <li>{{poem.Title}}</li>
+                <li>{{poem.Author}}</li>
+            </ul>
+        </div>
+
     </div>
 </div>

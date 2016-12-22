@@ -1,47 +1,19 @@
 ﻿app.controller("UserCtrl", function ($scope, PoetryFactory) {
 
-   
+    $scope.userPoems = [];
 
-    $scope.searchResults =
-        {
-            Title: "",
-            Poet: "",
-            Poem: "",
-        }
+    console.log("yes")
 
-    $scope.resultsArray = [];
-
-    $scope.displayResults = [];
-
-    $scope.Search = "";
-
-    const domParser = new DOMParser();
-
-    $scope.SearchPoetry = function () {
-        PoetryFactory.searchForPoetry($scope.Search).then(function (response) {
-            console.log(response);
-            var xmlData = response.data;
-            var parsedXml = domParser.parseFromString(xmlData, "text/xml");
-            var searchResults = parsedXml.querySelectorAll("result");
-
-            for (var i = 0; i < searchResults.length; i++) {
-                var nodes = searchResults[i];
-                var nodeTitle = nodes.querySelector("title").textContent
-                var nodePoet = nodes.querySelector("poet").textContent
-                var nodePoem = nodes.querySelector("poem").textContent
-                $scope.searchResults =
-                    {
-                        Title: nodeTitle,
-                        Poet: nodePoet,
-                        Poem: nodePoem
-                    }
-                $scope.resultsArray.push($scope.searchResults);
-                console.log($scope.resultsArray);
+    //This function gets the poem from my database by calling a factory method that makes an HTTP request to my WebApi controller that accesses my repository to retrieve all of the poems in my database.
+    var getUserPoems = function () {
+        console.log("access")
+        PoetryFactory.getUserPoetry().then(function (userPoetry) {
+            for (var i = 0; i < userPoetry.data.length; i++) {
+                console.log(userPoetry.data[i])
+                $scope.userPoems.push(userPoetry.data[i])
             }
-
-        }, function (error) {
-
-            console.log(error)
         })
-    }
+        console.log($scope.userPoems)
+    }()
+  
 });
