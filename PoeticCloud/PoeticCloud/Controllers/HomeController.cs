@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using PoeticCloud.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 
 namespace PoeticCloud.Controllers
@@ -16,8 +19,16 @@ namespace PoeticCloud.Controllers
         public ActionResult Create()
         {
             ViewBag.Message = "Your application description page.";
-
+            ViewBag.selectedPoem = new Poem();
             return View();
+        }
+
+        [System.Web.Mvc.HttpPost]
+        public ActionResult CreateFromSearch([FromBody]string[] selectedFromSearch)
+        {
+            
+            ViewBag.selectedPoem = JsonConvert.DeserializeObject<Poem>(selectedFromSearch[0]); 
+            return View("Create");
         }
 
         public ActionResult Search()

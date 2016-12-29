@@ -3,15 +3,18 @@
     ViewBag.Title = "Index";
 }
 
-<h2>My Poetry</h2>
+<h2 class="text-center">My Poetry</h2>
 
 <div ng-controller="UserCtrl">
-    <div ng-repeat="poem in userPoems">
+    <div ng-repeat="poem in userPoems" class="userPoems">
         <div>
             <ul>
                 <li>{{poem.Title}}</li>
                 <li>{{poem.Author}}</li>
             </ul>
+            <div>
+                <button ng-click="deletePoem(poem.Id)">Delete Poem</button> <button ng-click="showCloud(poem.Id)">Show Cloud</button>
+            </div>
         </div>
 
     </div>

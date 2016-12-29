@@ -1,5 +1,12 @@
 ﻿app.service("PoetryFactory", function ($http) {
 
+    var selectedPoetry = 
+        {
+            theTitle: "",
+            theAuthor: "",
+            thePoem: ""
+        }
+
     var getUserPoetry = function () {
 
         return $http({
@@ -19,6 +26,13 @@
 
     }
 
+    var deletePoetry = function (selectedPoemId) {
+        return $http({
+            method: 'DELETE',
+            url: '/api/User/' + selectedPoemId
+        })
+    }
+
     var searchForPoetry = function (keyword) {
         return $http({
             method: 'GET',
@@ -28,6 +42,6 @@
 
 
 
-    return { addPoetry: addPoetry, getUserPoetry: getUserPoetry, searchForPoetry: searchForPoetry }
+    return { addPoetry: addPoetry, getUserPoetry: getUserPoetry, deletePoetry: deletePoetry, searchForPoetry: searchForPoetry, selectedPoetry }
 
 })

@@ -2,11 +2,13 @@
 
     $scope.Poetry =
           {
-              Title: "",
-              Author: "",
-              Words: ""
+              Title: $("#Title").attr("value") || "",
+              Author: $("#Author").attr("value") || "",
+              Words: $("#Words").attr("value") || ""
           };
 
+
+    
   
     $scope.wordCloudData = [];
 
@@ -15,11 +17,18 @@
 
     $scope.CreateNSavePoem = function () {
         console.log("clicked")
+        console.log($scope.Poetry)
         PoetryFactory.addPoetry($scope.Poetry).then(function (response) {
             generateWordCloud();
+            $scope.clearInput();
         }, function (error) {
             console.log(error)
         })
+    }
+
+   $scope.clearInput = function () {
+       console.log("clear clicked")
+       $scope.Poetry = "";
     }
 
 

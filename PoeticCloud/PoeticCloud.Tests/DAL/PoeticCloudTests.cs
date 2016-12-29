@@ -47,11 +47,11 @@ namespace PoeticCloud.Tests
             mockPoetry = new Mock<DbSet<Poem>>();
             myPoems = new List<Poem>()
                  {
-            new Poem { Title = "Lovely Day", Author = "Blade", Words = "I was thinking about coming to your house, but I heard you live with a mouse" },
+            new Poem {Title = "Lovely Day", Author = "Blade", Words = "I was thinking about coming to your house, but I heard you live with a mouse", Id = 78 },
 
-            new Poem { Title = "Allergies", Author = "Biti", Words = "Walking through the trees. I feel a breeze. Oh I gotta sneeze. Achoo! Allergies" },
+            new Poem { Title = "Allergies", Author = "Biti", Words = "Walking through the trees. I feel a breeze. Oh I gotta sneeze. Achoo! Allergies", Id = 95 },
 
-            new Poem {Title = "Another One", Author = "Biti", Words = "You Got Flex" }
+            new Poem {Title = "Another One", Author = "Biti", Words = "You Got Flex", Id = 102 }
                 }; //Fake
             repo = new PoemRepository(mock_context.Object);
             ConnectMocksToDatastore();
@@ -125,6 +125,21 @@ namespace PoeticCloud.Tests
         }
 
         [TestMethod]
+        public void MakeSureICanGetPoemByID()
+        {
+            //Arrange
+            PoemRepository repo = new PoemRepository(mock_context.Object);
+
+            //Act
+            int myId = 102;
+            Poem found_poetry = repo.FindPoemById(myId);
+
+            List<Poem> my_poetry = repo.GetPoems();
+
+            Assert.IsTrue(my_poetry.Contains(found_poetry));
+        }
+
+        [TestMethod]
         public void MakeSureICanAddAPoem()
         {
             //Arrange
@@ -147,18 +162,18 @@ namespace PoeticCloud.Tests
         {
             //Arrange
             PoemRepository repo = new PoemRepository(mock_context.Object);
-            Poem newPoem = new Poem() { Title = "Test", Author = "Superman", Words = "This is that stuff right here dog" };
+            Poem newPoem = new Poem() { Title = "Test", Author = "Superman", Words = "This is that stuff right here dog", Id = 45 };
 
             //Act
             repo.AddPoem(newPoem);
-            Poem removed_poem = repo.RemovePoem(newPoem);
+            repo.RemovePoem(newPoem.Id);
 
             int numberOfPoems = repo.GetPoems().Count;
 
            List<Poem> my_poems = repo.GetPoems();
 
             //Assert
-            Assert.IsFalse(my_poems.Contains(removed_poem));
+            Assert.IsFalse(my_poems.Contains(newPoem));
         }
     }
 }

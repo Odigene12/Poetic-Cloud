@@ -30,11 +30,11 @@ namespace PoeticCloud.DAL
             Context.SaveChanges();
         }
 
-        public Poem RemovePoem(Poem newPoem)
+        public void RemovePoem(int selectedPoemId)
         {
-            Poem myPoem = Context.Poetry.Remove(newPoem);
+            Poem selectedPoem = FindPoemById(selectedPoemId);
+            Context.Poetry.Remove(selectedPoem);
             Context.SaveChanges();
-            return myPoem;
         }
 
         public Poem FindPoemByTitle(string title)
@@ -45,6 +45,11 @@ namespace PoeticCloud.DAL
         public List<Poem> FindPoemByAuthor(string author)
         {
             return Context.Poetry.Where(p => p.Author.ToLower() == author.ToLower()).ToList();
+        }
+
+        public Poem FindPoemById(int poemId)
+        {
+            return Context.Poetry.FirstOrDefault(p => p.Id == poemId);
         }
     }
 }

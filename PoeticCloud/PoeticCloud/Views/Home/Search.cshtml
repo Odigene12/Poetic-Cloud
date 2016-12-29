@@ -10,19 +10,23 @@
             <button class="glyphicon glyphicon-search" ng-click="SearchPoetry()"></button>
         </div>
         <div class="container">
-            <div ng-repeat="result in resultsArray">
-                <div class="panel panel-default">
-                    <div class="panel panel-heading">
-                        {{result.Title}}
-                    </div>
-                    <div class="panel panel-heading">
-                        by: {{result.Poet}}
-                    </div>
-                    <div>
-                        <button class="panel panel-success">Select</button>
+            <form id="fromSearch" action="/Home/CreateFromSearch" method="post">
+                <input type="hidden" ng-model="selectedFromSearch" id="selectedFromSerach" name="selectedFromSearch" value="{{selectedFromSearch}}"/>
+
+                <div ng-repeat="result in resultsArray">
+                    <div class="panel panel-default">
+                        <div class="panel panel-heading">
+                            {{result.Title}}
+                        </div>
+                        <div class="panel panel-heading">
+                            by: {{result.Poet}}
+                        </div>
+                        <div>
+                            <button class="panel panel-success" type="submit" ng-click="CreateFromSearch($event, result.Title, result.Poet, result.Poem)">Select</button>
+                        </div>
                     </div>
                 </div>
-            </div>         
+            </form>        
         </div>
 
     </div>

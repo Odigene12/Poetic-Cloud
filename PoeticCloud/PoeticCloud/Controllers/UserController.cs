@@ -40,6 +40,7 @@ namespace PoeticCloud.Controllers
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
+            repo.RemovePoem(id);
         }
     }
 }

@@ -20,3 +20,8 @@
     font-size: 14px;
     font-family: 'Lucida Calligraphy';
 }
+
+.userPoems{
+    float:left;
+    display: inline-block;
+}

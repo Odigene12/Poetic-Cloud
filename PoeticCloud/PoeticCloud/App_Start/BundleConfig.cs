@@ -24,12 +24,13 @@ namespace PoeticCloud
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                  "~/Scripts/angular.js",
+                  "~/Scripts/angular.min.js",
+                  "~/Scripts/angular-route.min.js",
                   "~/Scripts/app.js",
                   "~/Scripts/PoetryFactory.js",
                   "~/Scripts/UserCtrl.js",
-                  "~/Scripts/CreateCtrl.js",
-                  "~/Scripts/SearchCtrl.js"));
+                  "~/Scripts/SearchCtrl.js",
+                  "~/Scripts/CreateCtrl.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/semantic").Include(
                   "~/Scripts/semantic.js"));
