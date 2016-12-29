@@ -38,11 +38,9 @@
         //get the text from the userinput using $scope.
       let text = $scope.Poetry.Words;
       
-      var newWordArray = [];
      
        var deleteMarks = function () {
           var newText = text.replace(/[,.!—\-?:;]/g, " ")
-           newWordArray.push(newText)
 
                console.log(newText)
                return newText;

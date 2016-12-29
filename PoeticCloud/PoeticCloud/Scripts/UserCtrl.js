@@ -7,6 +7,8 @@
 
     $scope.wordCloudData = [];
 
+    $scope.emptyArray = [];
+
     console.log("yes")
 
     //This function gets the poem from my database by calling a factory method that makes an HTTP request to my WebApi controller that accesses my repository to retrieve all of the poems in my database.
@@ -28,7 +30,7 @@
     }
 
     $scope.showCloud = function (poemId) {
- 
+        $scope.wordCloudData = []
         PoetryFactory.getSelectedPoem(poemId).then(function (poem) {
             $scope.selectedPoemWords = poem.data.Words;
             console.log($scope.selectedPoemWords)
@@ -41,12 +43,11 @@
         
         //get the text from the userinput using $scope.
         let text = $scope.selectedPoemWords;
+        console.log(text)
 
-        var newWordArray = [];
 
         var deleteMarks = function () {
             var newText = text.replace(/[,.!—\-?:;]/g, " ")
-            newWordArray.push(newText)
 
             console.log(newText)
             return newText;
