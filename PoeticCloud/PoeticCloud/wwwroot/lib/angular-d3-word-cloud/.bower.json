@@ -1,0 +1,50 @@
+{
+  "name": "angular-d3-word-cloud",
+  "version": "0.1.1",
+  "description": "An AngularJS directive for angular-d3-word-cloud.js base on d3.js",
+  "main": [
+    "dist/angular-d3-word-cloud.js"
+  ],
+  "authors": [
+    "will.chen"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/weihanchen/angular-d3-word-cloud.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.x",
+    "angular-mocks": "^1.5.9",
+    "d3": "^3.3.13",
+    "d3-cloud": "^1.2.2",
+    "font-awesome": "^4.6.3",
+    "jquery": "^1.11.0"
+  },
+  "ignore": [
+    "**/.*",
+    "docs",
+    "node_modules",
+    "bower_components",
+    "src",
+    "test",
+    "tests",
+    "lib",
+    "examples",
+    "gulpfile.js",
+    "karma.conf.js",
+    "package.json",
+    "run.js"
+  ],
+  "private": false,
+  "homepage": "https://github.com/weihanchen/angular-d3-word-cloud",
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1",
+    "commit": "698dc270c4fa054365ed039e508349332e6c8a25"
+  },
+  "_source": "https://github.com/weihanchen/angular-d3-word-cloud.git",
+  "_target": "~0.1.1",
+  "_originalSource": "angular-d3-word-cloud"
+}

@@ -1,0 +1,27 @@
+﻿.panel-success{
+    background-color: green;
+}
+
+.panel-default {
+  border-color: black;
+  border-width: 2px;
+  margin: 10px;
+  float: left;
+  width: 175px; }
+
+.panel-default > .panel-heading
+ {
+ background-color: orange;
+ font-size: medium;
+ text-align: center;
+}
+
+.myForm {
+    font-size: 14px;
+    font-family: 'Lucida Calligraphy';
+}
+
+.userPoems{
+    float:left;
+    display: inline-block;
+}
