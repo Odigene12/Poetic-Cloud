@@ -20,9 +20,10 @@ namespace PoeticCloud.Controllers
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
+        public Poem Get(int id)
         {
-            return "value";
+           Poem foundPoem =  repo.FindPoemById(id);
+            return foundPoem;
         }
 
         // POST api/<controller>

@@ -16,6 +16,13 @@
 
     }
 
+    var getSelectedPoem = function (poemId) {
+        return $http({
+            method: 'GET',
+            url: '/api/User/' + poemId
+        })
+    }
+
     var addPoetry = function (newPoetry) {
 
         return $http({
@@ -42,6 +49,6 @@
 
 
 
-    return { addPoetry: addPoetry, getUserPoetry: getUserPoetry, deletePoetry: deletePoetry, searchForPoetry: searchForPoetry, selectedPoetry }
+    return { addPoetry: addPoetry, getUserPoetry: getUserPoetry, getSelectedPoem:getSelectedPoem, deletePoetry: deletePoetry, searchForPoetry: searchForPoetry, selectedPoetry }
 
 })
