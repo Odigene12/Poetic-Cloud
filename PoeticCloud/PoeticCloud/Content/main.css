@@ -2,15 +2,12 @@
     background-color: green;
 }
 
-.panel-default {
+ .result {
   border-color: black;
   border-width: 2px;
   margin: 10px;
   float: left;
-  width: 175px; }
-
-.panel-default > .panel-heading
- {
+  width: 175px;
  background-color: orange;
  font-size: medium;
  text-align: center;
@@ -19,9 +16,42 @@
 .myForm {
     font-size: 14px;
     font-family: 'Lucida Calligraphy';
+    padding-left: 30em;
+    border: solid;
+    border-color: green;
+    border-width: thick;
+    border-radius: 30px;
+    margin-top: 40px;
+}
 }
 
 .userPoems{
     float:left;
     display: inline-block;
+}
+
+i {
+    color: blue;
+}
+
+.ui labeled icon button {
+    color: green;
+}
+
+.myPoems {
+  border-color: black;
+  border-width: 2px;
+  margin: 10px;
+  float: left;
+  width: 175px;
+ background-color: firebrick;
+ font-size: medium;
+ text-align: center;
+}
+
+
+#svg {
+    background-color: white;
+    border-color: black;
+    border-style: thick;
 }

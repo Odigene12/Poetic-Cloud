@@ -7,13 +7,16 @@
 
 <div ng-controller="UserCtrl">
     <div ng-repeat="poem in userPoems" class="userPoems">
-        <div>
-            <ul>
-                <li>{{poem.Title}}</li>
-                <li>{{poem.Author}}</li>
-            </ul>
+        <div class="panel panel-default myPoems">
+            <div class="panel panel-heading user">
+                {{poem.Title}}
+            </div>
+            <div class="panel panel-heading user">
+                {{poem.Author}}
+            </div>
             <div>
-                <button ng-click="deletePoem(poem.Id)">Delete Poem</button> <button ng-click="showCloud(poem.Id)">Show Cloud</button>
+                <button class="ui labeled huge icon button" ng-click="deletePoem(poem.Id)"><i class="remove circle outline icon"></i></button> 
+                <button class="ui labeled huge icon button" ng-click="showCloud(poem.Id)"> <i class="cloud icon"></i></button>
             </div>
         </div>
 

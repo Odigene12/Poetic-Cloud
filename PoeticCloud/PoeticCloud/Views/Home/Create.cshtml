@@ -9,11 +9,11 @@
 
     <form class="myForm" name="myForm">
         <div>@Html.AntiForgeryToken()</div>
-        <div>@Html.TextBoxFor(model => model.Title, new { data_ng_model = "Poetry.Title", @Value = @ViewBag.selectedPoem.Title }  )</div> 
-        <div>@Html.TextBoxFor(model => model.Author, new { data_ng_model = "Poetry.Author", @Value = @ViewBag.selectedPoem.Author})</div>
-        <div>@Html.TextBoxFor(model => model.Words, new { data_ng_model = "Poetry.Words", @Value = @ViewBag.selectedPoem.Words}) </div> 
+        <div class="ui input"><label>Title:</label> @Html.TextBoxFor(model => model.Title, new { data_ng_model = "Poetry.Title", @Value = @ViewBag.selectedPoem.Title }  )</div> 
+        <div class="ui input"><label>Author:</label> @Html.TextBoxFor(model => model.Author, new { data_ng_model = "Poetry.Author", @Value = @ViewBag.selectedPoem.Author})</div>
+        <div class="ui input"><label>Text:</label> @Html.TextBoxFor(model => model.Words, new { data_ng_model = "Poetry.Words", @Value = @ViewBag.selectedPoem.Words}) </div> 
         <div>
-            <button ng-click="CreateNSavePoem()">Create Poem</button>
+            <button class="ui primary button center"ng-click="CreateNSavePoem()">Create Poem</button>
         </div>
     </form>
 
