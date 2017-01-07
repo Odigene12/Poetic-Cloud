@@ -13,7 +13,7 @@
  text-align: center;
 }
 
-.myForm {
+/*.myForm {
     font-size: 14px;
     font-family: 'Lucida Calligraphy';
     padding-left: 30em;
@@ -22,8 +22,8 @@
     border-width: thick;
     border-radius: 30px;
     margin-top: 40px;
-}
-}
+}*/
+
 
 .userPoems{
     float:left;
@@ -54,4 +54,13 @@ i {
     background-color: white;
     border-color: black;
     border-style: thick;
+}
+
+.row.matchedHeight {
+    overflow:hidden;
+}
+
+.row.matchedHeight [class*="col-"] {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
 }

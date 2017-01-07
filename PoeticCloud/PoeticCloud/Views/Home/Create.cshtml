@@ -5,21 +5,26 @@
 }
 
 <h2 class="text-center">Create Your Cloud</h2>
-<div ng-controller="CreateCtrl">
-
-    <form class="myForm" name="myForm">
-        <div>@Html.AntiForgeryToken()</div>
-        <div class="ui input"><label>Title:</label> @Html.TextBoxFor(model => model.Title, new { data_ng_model = "Poetry.Title", @Value = @ViewBag.selectedPoem.Title }  )</div> 
-        <div class="ui input"><label>Author:</label> @Html.TextBoxFor(model => model.Author, new { data_ng_model = "Poetry.Author", @Value = @ViewBag.selectedPoem.Author})</div>
-        <div class="ui input"><label>Text:</label> @Html.TextBoxFor(model => model.Words, new { data_ng_model = "Poetry.Words", @Value = @ViewBag.selectedPoem.Words}) </div> 
-        <div>
-            <button class="ui primary button center"ng-click="CreateNSavePoem()">Create Poem</button>
+<div ng-controller="CreateCtrl" class="row matchedHeight">
+    <div class="col-md-8">
+        <div id="wordsCloud">
+            <word-cloud words="words" width="width" height="height">
+            </word-cloud>
+            <br />
         </div>
-    </form>
-
-    <div id="wordsCloud">
-        <word-cloud words="words" width ="width" height ="height">
-        </word-cloud>
+    </div>
+    <div class="col-md-4">
+        <form class="myForm panel panel-default" name="myForm">
+            <div class="panel-body">
+                <div>@Html.AntiForgeryToken()</div>
+                <div><label>Title:</label> @Html.TextBoxFor(model => model.Title, new { data_ng_model = "Poetry.Title", @Value = @ViewBag.selectedPoem.Title })</div>
+                <div><label>Author:</label> @Html.TextBoxFor(model => model.Author, new { data_ng_model = "Poetry.Author", @Value = @ViewBag.selectedPoem.Author })</div>
+                <div><label>Text:</label> @Html.TextAreaFor(model => model.Words, new { data_ng_model = "Poetry.Words", @Value = @ViewBag.selectedPoem.Words }) </div>
+                <div>
+                    <button class="ui primary button center" ng-click="CreateNSavePoem()">Create Poem</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
