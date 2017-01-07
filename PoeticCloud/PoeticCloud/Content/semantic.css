@@ -319,7 +319,7 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */
-  margin: 0;
+  margin: 12px;
   /* 3 */
 }
 
@@ -528,7 +528,7 @@ body {
   padding: 0px;
   overflow-x: hidden;
   min-width: 320px;
-  background: #ffffff;
+  background: #ecb67d;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.4285em;
@@ -558,7 +558,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.714rem;
+  font-size: 3.714rem;
 }
 
 h3 {
@@ -578,7 +578,7 @@ h2:first-child,
 h3:first-child,
 h4:first-child,
 h5:first-child {
-  margin-top: 0em;
+  margin-top: 1em;
 }
 
 h1:last-child,
@@ -693,7 +693,7 @@ input::selection {
   background: #e0e1e2 none;
   color: rgba(0, 0, 0, 0.6);
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  margin: 0em 0.25em 0em 0em;
+  margin: 2em 0.25em 1em 7em;
   padding: 0.78571429em 1.5em 0.78571429em;
   text-transform: none;
   text-shadow: none;
@@ -10525,10 +10525,14 @@ img.ui.bordered.image {
   display: -ms-inline-flexbox;
   display: inline-flex;
   color: rgba(0, 0, 0, 0.87);
+  padding-left: 410px;
 }
 
 .ui.input input {
-  margin: 0em;
+ margin-top: 1em;
+ margin-bottom: 1em;
+ margin-left: 3em;
+ margin-right: 6em;
   max-width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 auto;
@@ -10541,7 +10545,7 @@ img.ui.bordered.image {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   padding: 0.67861429em 1em;
   background: #ffffff;
-  border: 1px solid rgba(34, 36, 38, 0.15);
+  border: 7px solid rgba(178, 34, 34, 1.0);
   color: rgba(0, 0, 0, 0.87);
   border-radius: 0.28571429rem;
   -webkit-transition: background-color 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
@@ -10927,7 +10931,9 @@ img.ui.bordered.image {
 .ui.action.input > .buttons > .button {
   padding-top: 0.78571429em;
   padding-bottom: 0.78571429em;
-  margin: 0;
+  margin: 15px;
+  padding-left: 15px;
+  margin-left: -84px;
 }
 
 /* Button on Right */

@@ -1,20 +1,20 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h1>Search Page</h1>
+<h2 class="text-center">Search Page</h2>
 
 <div ng-controller="SearchCtrl">
     <div id="Search">
-        <div>
+        <div class="ui action input">
             <input type="text" placeholder="keyword" ng-model="Search" />
-            <button class="glyphicon glyphicon-search" ng-click="SearchPoetry()"></button>
+            <button class="ui icon button" ng-click="SearchPoetry()"><i class="big search icon"></i></button>
         </div>
         <div class="container">
             <form id="fromSearch" action="/Home/CreateFromSearch" method="post">
                 <input type="hidden" ng-model="selectedFromSearch" id="selectedFromSerach" name="selectedFromSearch" value="{{selectedFromSearch}}"/>
 
                 <div ng-repeat="result in resultsArray">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default result">
                         <div class="panel panel-heading">
                             {{result.Title}}
                         </div>
