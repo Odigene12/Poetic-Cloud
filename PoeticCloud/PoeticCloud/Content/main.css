@@ -2,15 +2,18 @@
     background-color: green;
 }
 
+.theResults {
+    display: inline-block;
+}
+
  .result {
   border-color: black;
   border-width: 2px;
-  margin: 10px;
-  float: left;
   width: 175px;
  background-color: orange;
  font-size: medium;
  text-align: center;
+
 }
 
 /*.myForm {
@@ -30,13 +33,6 @@
     display: inline-block;
 }
 
-i {
-    color: blue;
-}
-
-.ui labeled icon button {
-    color: green;
-}
 
 .myPoems {
   border-color: black;
@@ -63,4 +59,20 @@ i {
 .row.matchedHeight [class*="col-"] {
     margin-bottom: -99999px;
     padding-bottom: 99999px;
+}
+
+body {
+    background-image: url("http://www.drodd.com/images15/sky22.jpg")
+}
+
+.btnCreate {
+    margin-left: 100px;
+}
+  
+.navbar-inverse .navbar-brand {
+    color: azure;
+}  
+
+.navbar-inverse .navbar-nav>li>a {
+    color: azure;
 }

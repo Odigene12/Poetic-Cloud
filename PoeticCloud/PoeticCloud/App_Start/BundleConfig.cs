@@ -32,9 +32,6 @@ namespace PoeticCloud
                   "~/Scripts/SearchCtrl.js",
                   "~/Scripts/CreateCtrl.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/semantic").Include(
-                  "~/Scripts/semantic.js"));
-
             bundles.Add(new ScriptBundle("~/bundles/wordcloud").Include(
                   "~/wwwroot/lib/d3/d3.min.js",
                   "~/wwwroot/lib/d3-cloud/build/d3.layout.cloud.js",
@@ -43,8 +40,7 @@ namespace PoeticCloud
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/main.css",
-                      "~/Content/semantic.css"));
+                      "~/Content/main.css"));
         }
     }
 }
