@@ -7,13 +7,14 @@
     <div id="Search">
         <div class="ui action input">
             <input type="text" placeholder="keyword" ng-model="Search" />
-            <button class="ui icon button" ng-click="SearchPoetry()"><i class="big search icon"></i></button>
+            <button class="btn-success" ng-click="SearchPoetry()">Search</button>
         </div>
-        <div class="container">
+        <br />
+        <div class="container col-md-11">
             <form id="fromSearch" action="/Home/CreateFromSearch" method="post">
                 <input type="hidden" ng-model="selectedFromSearch" id="selectedFromSerach" name="selectedFromSearch" value="{{selectedFromSearch}}"/>
 
-                <div ng-repeat="result in resultsArray">
+                <div ng-repeat="result in resultsArray" class="theResults">
                     <div class="panel panel-default result">
                         <div class="panel panel-heading">
                             {{result.Title}}
